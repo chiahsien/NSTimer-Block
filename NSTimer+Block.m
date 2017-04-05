@@ -31,7 +31,7 @@
 #pragma mark - Private methods
 
 + (void)cht_invokeBlock:(NSTimer *)timer {
-    void (^block)() = timer.userInfo;
+    void (^block)(NSTimer *) = timer.userInfo;
     if (block) {
         block(timer);
     }
